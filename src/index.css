@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #111827;
+  --color-navy-dark: #0b0f19;
+  --color-gold: #C59A4A;
+  --color-gold-hover: #D4AF6A;
+  --color-light-bg: #F8F6F1;
+  --color-dark-text: #1F2937;
+  --color-muted-text: #6B7280;
+
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.font-serif-title {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+}
+
+.font-sans-body {
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+
+/* Custom Dropdown Animation */
+@keyframes dropdownFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdownFadeSlide 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Underline Animation */
+.nav-underline-effect {
+  position: relative;
+}
+
+.nav-underline-effect::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #C59A4A;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-underline-effect:hover::after,
+.nav-underline-effect.active::after {
+  width: 38px;
+}
