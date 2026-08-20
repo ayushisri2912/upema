@@ -1,5 +1,9 @@
+// 
+
+
+// src/Components/HomeComponents/PillarsSection.jsx
 import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiMapPin } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const eventHubs = [
@@ -34,41 +38,43 @@ const eventHubs = [
 
 const PillarsSection = () => {
   return (
-    // <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/60">
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60 transition-colors duration-300">
-
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-10 sm:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
         
-        {/* Section Header (Matching IPA Reference Style) */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-         <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-[#D49A24] text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3">            <span>🏛️</span>
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 text-[#1279CF] text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 shadow-sm">
+            <span>🏛️</span>
             <span>EXPERIENTIAL DESTINATIONS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Uttar Pradesh: Where Heritage Meets <span className="text-[#1279CF]">Modern Celebrations</span>
+          <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight">
+            Uttar Pradesh: Where Heritage Meets{' '}
+            <span className=" text-[#1279CF]">Modern Celebrations</span>
           </h2>
 
-          <p className="mt-3 text-slate-600 text-sm sm:text-base">
+          <p className="mt-2.5 text-slate-600 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             From regal nawabi palaces to futuristic convention arenas, empowering every dimension of the event fraternity.
           </p>
         </div>
 
         {/* 3-Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {eventHubs.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1"
+              className="bg-white rounded-3xl overflow-hidden border border-[#D5E5F2] shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col group hover:-translate-y-1"
             >
               {/* Card Image */}
-              <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+              <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <span className="absolute top-3 left-3 bg-[#0D3B66]/90 text-[#F8C54E] text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-sm uppercase tracking-wider">
+                
+                {/* Floating Tag */}
+                <span className="absolute top-3.5 left-3.5 bg-[#0D3B66]/90 text-[#F8C54E] text-[10px] sm:text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-sm uppercase tracking-wider shadow-sm border border-[#F8C54E]/20">
                   {item.tag}
                 </span>
               </div>
@@ -76,13 +82,17 @@ const PillarsSection = () => {
               {/* Card Body */}
               <div className="p-6 flex flex-col flex-grow justify-between">
                 <div>
-                  <span className="text-xs font-bold text-[#1279CF] uppercase tracking-wider block mb-1">
-                    {item.city}
-                  </span>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#1279CF] transition-colors">
+                  {/* City Badge */}
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#1279CF] uppercase tracking-wider mb-2">
+                    <FiMapPin className="w-3.5 h-3.5" />
+                    <span>{item.city}</span>
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2.5 group-hover:text-[#1279CF] transition-colors leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-6">
+
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
                     {item.description}
                   </p>
                 </div>
@@ -90,7 +100,7 @@ const PillarsSection = () => {
                 {/* Explore Link */}
                 <Link
                   to="/events"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#0D3B66] uppercase tracking-wider group-hover:text-[#1279CF] transition-colors mt-auto pt-4 border-t border-slate-100"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#0D3B66] uppercase tracking-wider group-hover:text-[#1279CF] transition-colors pt-4 border-t border-slate-100 mt-auto"
                 >
                   <span>Explore Portfolio</span>
                   <FiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
