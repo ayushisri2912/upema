@@ -258,7 +258,7 @@ const WhyBecomeMembers = () => {
                 key={idx}
                 className={`relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all duration-300 ${
                   t.popular
-                    ? 'bg-[#0D2238] text-white shadow-2xl scale-105 border-2 border-[#C9A45C]'
+                    ? 'bg-[#0D2238] text-white shadow-2xl lg:scale-105 border-2 border-[#C9A45C]'
                     : 'bg-white text-slate-900 border border-[#D5E5F2] shadow-md hover:shadow-xl'
                 }`}
               >

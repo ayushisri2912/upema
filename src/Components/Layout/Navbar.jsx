@@ -548,9 +548,11 @@ const Navbar = () => {
             px-4
             sm:px-6
             lg:px-8
-            min-h-[90px]
+            min-h-[70px]
+            sm:min-h-[90px]
             md:min-h-[105px]
-            py-4
+            py-2.5
+            sm:py-4
             flex
             items-center
             justify-between
@@ -1043,8 +1045,9 @@ const Navbar = () => {
           lg:hidden
           fixed
           inset-x-0
-          top-[90px]
-          sm:top-[105px]
+          top-[70px]
+          sm:top-[90px]
+          md:top-[105px]
           bottom-0
           bg-[#081A2B]
           text-white

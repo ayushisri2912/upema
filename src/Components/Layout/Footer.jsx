@@ -348,21 +348,21 @@ const Footer = () => {
               Contact Us
             </h3>
             <div className="space-y-2.5 text-xs sm:text-sm text-zinc-300 mt-4">
-              <div className="flex items-center gap-2.5 whitespace-nowrap group">
+              <div className="flex items-center gap-2.5 group">
                 <FiPhone className="w-3.5 h-3.5 text-[#D4A359] flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <a href="tel:+915222345678" className="font-medium text-white hover:text-[#D4A359] transition-colors">
                   +91 522 234 5678
                 </a>
               </div>
-              <div className="flex items-center gap-2.5 whitespace-nowrap group">
+              <div className="flex items-center gap-2.5 group">
                 <FiMail className="w-3.5 h-3.5 text-[#D4A359] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <a href="mailto:info@upema.in" className="hover:text-[#D4A359] transition-colors">
+                <a href="mailto:info@upema.in" className="hover:text-[#D4A359] transition-colors break-all">
                   info@upema.in
                 </a>
               </div>
-              <div className="flex items-center gap-2.5 whitespace-nowrap group">
+              <div className="flex items-center gap-2.5 group">
                 <FiMail className="w-3.5 h-3.5 text-[#D4A359] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <a href="mailto:secretariat@upema.in" className="hover:text-[#D4A359] transition-colors">
+                <a href="mailto:secretariat@upema.in" className="hover:text-[#D4A359] transition-colors break-all">
                   secretariat@upema.in
                 </a>
               </div>

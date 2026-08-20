@@ -212,9 +212,9 @@ const Hero = () => {
     absolute
     inset-0
     bg-gradient-to-b
-    from-[#0F2742]/50
-    via-[#0F2742]/40
-    to-[#081A2B]/65
+    from-[#0F2742]/45
+    via-[#0F2742]/30
+    to-[#081A2B]/60
   "
 />
 
@@ -462,6 +462,8 @@ const Hero = () => {
             to="/membership"
             className="
               group
+              w-full
+              sm:w-auto
               min-w-[190px]
               px-7
               py-3.5
@@ -512,6 +514,8 @@ const Hero = () => {
             to="/events"
             className="
               group
+              w-full
+              sm:w-auto
               min-w-[190px]
               px-7
               py-3.5
