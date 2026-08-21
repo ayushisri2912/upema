@@ -161,22 +161,7 @@ const OurHistory = () => {
 </section>
 
       {/* 2. Key Metrics Bar */}
-      {/* <section className="bg-[#0D3B66] text-white border-b border-white/10 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {stats.map((st, i) => (
-            <div key={i} className="border-r last:border-r-0 border-white/10 px-2">
-              <span className="text-2xl sm:text-4xl font-extrabold text-[#D4A359] tracking-tight block">
-                {st.value}
-              </span>
-              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white mt-1">
-                {st.label}
-              </h4>
-              <p className="text-[11px] text-slate-300 mt-0.5">{st.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
+     
       {/* 3. Story / Inception Section */}
       <section className="pt-12 sm:pt-16 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">

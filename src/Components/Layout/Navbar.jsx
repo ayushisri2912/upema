@@ -1348,7 +1348,7 @@ const Navbar = () => {
 
             {/* Contacts */}
 
-            <div
+            {/* <div
               className="
                 grid
                 grid-cols-1
@@ -1359,7 +1359,7 @@ const Navbar = () => {
               "
             >
 
-              {/* Phone */}
+              
 
               <a
                 href="tel:+915222345678"
@@ -1384,7 +1384,6 @@ const Navbar = () => {
                 </span>
               </a>
 
-              {/* Email */}
 
               <a
                 href="mailto:info@upema.in"
@@ -1409,7 +1408,56 @@ const Navbar = () => {
                 </span>
               </a>
 
-            </div>
+            </div> */}
+
+            <div className="flex items-center gap-6">
+
+  {/* 1. Phone Block */}
+  <a
+    href="tel:+915222345678"
+    className="flex items-center gap-3 group text-left transition-all duration-200"
+  >
+    {/* Dark Solid Navy Circle with Gold Border */}
+    <div className="w-10 h-10 rounded-full bg-[#081A2B] border-2 border-[#C9A45C] group-hover:bg-[#1279CF] group-hover:border-[#1279CF] flex items-center justify-center text-[#E5B54F] group-hover:text-white shadow-md transition-all duration-300 flex-shrink-0">
+      <FiPhone className="w-4 h-4 transition-transform group-hover:scale-110" />
+    </div>
+
+    {/* Labels */}
+    <div className="flex flex-col">
+      <span className="text-[10px] font-black uppercase tracking-[0.14em] text-[#081A2B] leading-none mb-1">
+        CALL US
+      </span>
+      <span className="text-xs sm:text-sm font-extrabold text-[#081A2B] group-hover:text-[#1279CF] transition-colors leading-none font-mono">
+        +91 522 234 5678
+      </span>
+    </div>
+  </a>
+
+  {/* Vertical Divider */}
+  <span className="w-px h-8 bg-slate-300 hidden sm:block" />
+
+  {/* 2. Email Block */}
+  <a
+    href="mailto:info@upema.in"
+    className="flex items-center gap-3 group text-left transition-all duration-200"
+  >
+    {/* Dark Solid Navy Circle with Gold Border */}
+    <div className="w-10 h-10 rounded-full bg-[#081A2B] border-2 border-[#C9A45C] group-hover:bg-[#1279CF] group-hover:border-[#1279CF] flex items-center justify-center text-[#E5B54F] group-hover:text-white shadow-md transition-all duration-300 flex-shrink-0">
+      <FiMail className="w-4 h-4 transition-transform group-hover:scale-110" />
+    </div>
+
+    {/* Labels */}
+    <div className="flex flex-col">
+      <span className="text-[10px] font-black uppercase tracking-[0.14em] text-[#081A2B] leading-none mb-1">
+        EMAIL US
+      </span>
+      <span className="text-xs sm:text-sm font-extrabold text-[#081A2B] group-hover:text-[#1279CF] transition-colors leading-none">
+        info@upema.in
+      </span>
+    </div>
+  </a>
+
+</div>
           </div>
 
         </div>

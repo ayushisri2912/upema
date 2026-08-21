@@ -214,7 +214,7 @@ const Hero = () => {
     bg-gradient-to-b
     from-[#0F2742]/45
     via-[#0F2742]/30
-    to-[#081A2B]/60
+    to-[#081A2B]/65
   "
 />
 

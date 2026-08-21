@@ -1,325 +1,221 @@
-// // src/Components/HomeComponents/BenefitsSection.jsx
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { 
-//   FiUsers, 
-//   FiAward, 
-//   FiShield, 
-//   FiTrendingUp, 
-//   FiArrowRight, 
-//   FiCheckCircle 
-// } from 'react-icons/fi';
-
-// const benefits = [
-//   {
-//     id: 1,
-//     title: 'State-Wide Trade & Vendor Networking',
-//     desc: 'Connect directly with top wedding planners, luxury decor fabricators, artists, and sound/light suppliers across 25+ districts of UP.',
-//     icon: FiUsers,
-//   },
-//   {
-//     id: 2,
-//     title: 'Official Certification & Industry Trust',
-//     desc: 'Gain high client credibility and official recognition with verified UPEMA trade badges and state member certificates.',
-//     icon: FiAward,
-//   },
-//   {
-//     id: 3,
-//     title: 'Government Representation & Policy Advocacy',
-//     desc: 'Enjoy collective representation before municipal and tourism bodies for single-window event permissions, sound norms, and trade licensing.',
-//     icon: FiShield,
-//   },
-//   {
-//     id: 4,
-//     title: 'Direct Business Referrals & B2B Inquiries',
-//     desc: 'Access verified vendor tenders, premium event leads, inter-city equipment sharing, and corporate event listings.',
-//     icon: FiTrendingUp,
-//   },
-// ];
-
-// const BenefitsSection = () => {
-//   return (
-//     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden border-t border-slate-100">
-//       <div className="max-w-7xl mx-auto">
-        
-//         {/* Centered Top Header (IPA Reference Style) */}
-//         <div className="text-center max-w-3xl mx-auto mb-16">
-//           <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50 text-[#1279CF] border border-blue-200/60 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3.5">
-//             <span className="text-[#F8C54E]">★</span>
-//             <span>MEMBERSHIP PRIVILEGES</span>
-//           </div>
-
-//           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-//             Why Join <span className="text-[#1279CF]">UPEMA</span>?
-//           </h2>
-
-//           <p className="mt-3 text-slate-600 text-sm sm:text-base md:text-lg">
-//             Build brand credibility, gain state-wide recognition, and unlock high-value business collaborations across Uttar Pradesh.
-//           </p>
-//         </div>
-
-//         {/* 2-Column Responsive Layout */}
-//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-//           {/* LEFT 6-COLUMNS: Image with 2 Floating Stat Badges */}
-//           <div className="lg:col-span-6 relative">
-            
-//             {/* Main Rounded Image Frame */}
-//             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-50 aspect-[4/3] sm:aspect-[16/11]">
-//               <img
-//                 src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80"
-//                 alt="Event Management Strategy Meeting"
-//                 className="w-full h-full object-cover"
-//               />
-//               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
-//             </div>
-
-//             {/* Top-Left Floating Badge (Members Count) */}
-//             <div className="absolute -top-4 -left-3 sm:-top-6 sm:-left-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-100 flex flex-col items-center min-w-[120px] sm:min-w-[140px] animate-fade-in">
-//               <span className="text-2xl sm:text-3xl font-extrabold text-[#1279CF] leading-tight">
-//                 300+
-//               </span>
-//               <span className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">
-//                 Active Members
-//               </span>
-//             </div>
-
-//             {/* Bottom-Right Floating Badge (Summits Count) */}
-//             <div className="absolute -bottom-4 -right-3 sm:-bottom-6 sm:-right-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-100 flex flex-col items-center min-w-[120px] sm:min-w-[140px]">
-//               <span className="text-2xl sm:text-3xl font-extrabold text-[#D49A24] leading-tight">
-//                 15+
-//               </span>
-//               <span className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">
-//                 Summits / Year
-//               </span>
-//             </div>
-
-//           </div>
-
-//           {/* RIGHT 6-COLUMNS: Narrative & 4 Distinct Benefit Items */}
-//           <div className="lg:col-span-6 space-y-6">
-            
-//             <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-//               UPEMA membership elevates your company profile, standardizes your event safety protocols, and connects you directly with the most influential trade pioneers and suppliers across Uttar Pradesh.
-//             </p>
-
-//             {/* Benefit Items List */}
-//             <div className="space-y-4 pt-2">
-//               {benefits.map((item) => {
-//                 const Icon = item.icon;
-//                 return (
-//                   <div 
-//                     key={item.id}
-//                     className="flex items-start gap-4 p-3.5 rounded-xl hover:bg-slate-50 transition-colors group"
-//                   >
-//                     {/* Icon Accent */}
-//                     <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#1279CF] flex items-center justify-center flex-shrink-0 group-hover:bg-[#1279CF] group-hover:text-white transition-colors duration-200 shadow-sm mt-0.5">
-//                       <Icon className="w-5 h-5" />
-//                     </div>
-
-//                     <div>
-//                       <h3 className="text-base font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug flex items-center gap-2">
-//                         {item.title}
-//                       </h3>
-//                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1">
-//                         {item.desc}
-//                       </p>
-//                     </div>
-//                   </div>
-//                 );
-//               })}
-//             </div>
-
-//             {/* Action CTA Button Row */}
-//             <div className="pt-4 flex items-center gap-4">
-//               <Link
-//                 to="/membership"
-//                 className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#1279CF] hover:bg-[#0D3B66] text-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-blue-500/20 hover:shadow-blue-500/35 transition-all duration-200 hover:-translate-y-0.5"
-//               >
-//                 <span>Join UPEMA Today</span>
-//                 <FiArrowRight className="w-4 h-4" />
-//               </Link>
-
-//               <Link
-//                 to="/about/governing-body"
-//                 className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#1279CF] uppercase tracking-wider px-4 py-3 transition-colors"
-//               >
-//                 <span>Learn Rules & Bylaws</span>
-//                 <FiArrowRight className="w-3.5 h-3.5" />
-//               </Link>
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default BenefitsSection;
-
-// src/Components/HomeComponents/BenefitsSection.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { 
   FiUsers, 
   FiAward, 
   FiShield, 
   FiTrendingUp, 
-  FiArrowRight 
-} from 'react-icons/fi';
+  FiArrowRight, 
+  FiCheckCircle 
+} from 'react-icons/fi'
 
-const benefits = [
+const whyChooseCards = [
   {
     id: 1,
-    title: 'State-Wide Trade & Vendor Networking',
-    desc: 'Connect directly with top wedding planners, luxury decor fabricators, artists, and sound/light suppliers across 25+ districts of UP.',
+    title: 'State-Wide Networking',
+    subtitle: 'CONNECTING 25+ UP DISTRICTS',
+    description:
+      'Connect directly with top wedding planners, luxury decor fabricators, artists, and sound/light suppliers across Uttar Pradesh.',
     icon: FiUsers,
+    sphereBg: 'bg-gradient-to-tr from-[#0B1F3A] via-[#1279CF] to-[#3B82F6] text-white',
+    badgeBg: 'bg-blue-50 text-[#1279CF] border-blue-200/60',
+    cardBg: 'bg-[#F0F6FB]',
+    pillIconColor: 'text-[#1279CF]',
+    columnClass: ''
   },
   {
     id: 2,
-    title: 'Official Certification & Industry Trust',
-    desc: 'Gain high client credibility and official recognition with verified UPEMA trade badges and state member certificates.',
+    title: 'Official Certification',
+    subtitle: 'VERIFIED TRADE RECOGNITION',
+    description:
+      'Gain high client credibility and official recognition with verified UPEMA trade badges and state member certificates.',
     icon: FiAward,
+    sphereBg: 'bg-gradient-to-tr from-[#0B1F3A] via-[#9E7A32] to-[#C9A45C] text-[#F8C54E]',
+    badgeBg: 'bg-amber-50 text-[#9E7A32] border-amber-200/60',
+    cardBg: 'bg-[#FAF6EE]',
+    pillIconColor: 'text-[#9E7A32]',
+    columnClass: 'lg:mt-10' // Smooth controlled staggered offset on desktop
   },
   {
     id: 3,
-    title: 'Government Representation & Policy Advocacy',
-    desc: 'Enjoy collective representation before municipal and tourism bodies for single-window event permissions, sound norms, and trade licensing.',
+    title: 'Government Advocacy',
+    subtitle: 'SINGLE-WINDOW CLEARANCES',
+    description:
+      'Enjoy collective representation before municipal and tourism bodies for single-window event permissions and sound norms.',
     icon: FiShield,
+    sphereBg: 'bg-gradient-to-tr from-[#1279CF] to-[#2563EB] text-white',
+    badgeBg: 'bg-sky-50 text-[#1279CF] border-sky-200/60',
+    cardBg: 'bg-[#F0F7FF]',
+    pillIconColor: 'text-[#1279CF]',
+    columnClass: ''
   },
   {
     id: 4,
-    title: 'Direct Business Referrals & B2B Inquiries',
-    desc: 'Access verified vendor tenders, premium event leads, inter-city equipment sharing, and corporate event listings.',
+    title: 'Direct B2B Referrals',
+    subtitle: 'TENDERS & EQUIPMENT LEADS',
+    description:
+      'Access verified vendor tenders, premium event leads, inter-city equipment sharing, and corporate event listings.',
     icon: FiTrendingUp,
-  },
-];
+    sphereBg: 'bg-gradient-to-tr from-[#0B1F3A] to-[#1279CF] text-[#C9A45C]',
+    badgeBg: 'bg-slate-100 text-slate-700 border-slate-200',
+    cardBg: 'bg-[#F4F6F9]',
+    pillIconColor: 'text-[#0B1F3A]',
+    columnClass: 'lg:mt-10' // Smooth controlled staggered offset on desktop
+  }
+]
 
 const BenefitsSection = () => {
   return (
-    // <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden border-t border-slate-100">
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60 transition-colors duration-300">
+    <section className="w-full bg-[#F8F6F1] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 font-sans relative overflow-hidden">
+      
+      {/* Background Decorative Ambient Glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-[#1279CF]/8 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[500px] h-[300px] bg-[#C9A45C]/8 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto relative z-10">
         
-        {/* Centered Top Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50 text-[#1279CF] border border-blue-200/60 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3.5">
-            <span className="text-[#F8C54E]">★</span>
+        {/* Centered Header (Matching PillarsSection & Other Home Sections Typography Exactly) */}
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 text-[#1279CF] text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3.5 shadow-xs"
+          >
+            <span>★</span>
             <span>MEMBERSHIP PRIVILEGES</span>
-          </div>
+          </motion.div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight mb-3"
+          >
             Why Join <span className="text-[#1279CF]">UPEMA</span>?
-          </h2>
+          </motion.h2>
 
-          <p className="mt-3 text-slate-600 text-sm sm:text-base md:text-lg">
-            Build brand credibility, gain state-wide recognition, and unlock high-value business collaborations across Uttar Pradesh.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-slate-600 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-normal"
+          >
+            Build brand credibility, gain state-wide statutory protection, and unlock high-value B2B collaborations across Uttar Pradesh.
+          </motion.p>
         </div>
 
-        {/* 2-Column Responsive Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        {/* Staggered 2x2 Floating Cards Container with Background Connecting Dashed Lines */}
+        <div className="relative">
           
-          {/* LEFT 6-COLUMNS: Image with 2 Floating Stat Badges */}
-          <div className="lg:col-span-6 relative">
-            
-            {/* Main Rounded Image Frame */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-50 aspect-[4/3] sm:aspect-[16/11]">
-              <img
-                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80"
-                alt="Event Management Strategy Meeting"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
-            </div>
+          {/* Dashed SVG Connecting Path (Visible on Large Screens) */}
+          <svg
+            className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block opacity-25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 280 140 Q 500 220 760 180 Q 500 440 280 400 Q 500 480 760 440"
+              fill="none"
+              stroke="#1279CF"
+              strokeWidth="2"
+              strokeDasharray="8 8"
+            />
+          </svg>
 
-            {/* Top-Left Floating Badge (Members Count) */}
-            <div className="absolute -top-4 -left-3 sm:-top-6 sm:-left-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-100 flex flex-col items-center min-w-[120px] sm:min-w-[140px]">
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#1279CF] leading-tight">
-                300+
-              </span>
-              <span className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">
-                Active Members
-              </span>
-            </div>
-
-            {/* Bottom-Right Floating Badge (Summits Count) */}
-            <div className="absolute -bottom-4 -right-3 sm:-bottom-6 sm:-right-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-100 flex flex-col items-center min-w-[120px] sm:min-w-[140px]">
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#D49A24] leading-tight">
-                15+
-              </span>
-              <span className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">
-                Summits / Year
-              </span>
-            </div>
-
-          </div>
-
-          {/* RIGHT 6-COLUMNS: Radiance-style Light Blue Rounded Cards */}
-          <div className="lg:col-span-6 space-y-4">
-            
-            <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-2">
-              UPEMA membership elevates your company profile, standardizes your event safety protocols, and connects you directly with the most influential trade pioneers and suppliers across Uttar Pradesh.
-            </p>
-
-            {/* Benefit Cards (Light Blue -> White on Hover) */}
-            <div className="space-y-3.5">
-              {benefits.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div 
-                    key={item.id}
-                    className="flex items-start gap-4 p-4 sm:p-5 rounded-2xl bg-[#E8F2FA] hover:bg-white border border-[#D5E5F2] hover:border-blue-200 transition-colors duration-200 shadow-sm hover:shadow-md group cursor-pointer"
-                  >
-                    {/* Circle Icon Badge */}
-                    <div className="w-11 h-11 rounded-full bg-[#0D3B66] text-[#F8C54E] group-hover:bg-[#1279CF] group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors duration-200 shadow-sm mt-0.5">
-                      <Icon className="w-5 h-5" />
+          {/* 4 Staggered Offset Node Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-start relative z-10">
+            {whyChooseCards.map((item, idx) => {
+              const IconComponent = item.icon
+              return (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.12 }}
+                  className={`relative group ${item.columnClass}`}
+                >
+                  <div className="bg-white rounded-[2rem] p-3.5 sm:p-4 shadow-md hover:shadow-xl border border-slate-200/90 hover:border-[#1279CF]/60 transition-all duration-300 transform group-hover:-translate-y-1.5 relative">
+                    
+                    {/* Floating 3D/Sphere Icon Badge (Overlapping Top Boundary) */}
+                    <div
+                      className={`absolute -top-5 left-6 sm:left-8 w-11 h-11 rounded-2xl shadow-md border-2 border-white flex items-center justify-center text-lg ${item.sphereBg} transition-transform duration-300 group-hover:scale-105`}
+                    >
+                      <IconComponent />
                     </div>
 
-                    {/* Text Details */}
-                    <div>
-                      <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug">
+                    {/* Inner Soft-Tinted Card Container */}
+                    <div className={`${item.cardBg} rounded-[1.3rem] p-5 sm:p-6 pt-7 border border-slate-100/90`}>
+                      
+                      {/* Subtitle Badge & Small Icon */}
+                      <div className="flex items-center justify-between mb-3.5">
+                        <div className={`w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow-2xs ${item.pillIconColor}`}>
+                          <IconComponent className="w-4 h-4" />
+                        </div>
+                        <span className={`text-[10px] font-bold tracking-wider px-3 py-1 rounded-full border ${item.badgeBg}`}>
+                          {item.subtitle}
+                        </span>
+                      </div>
+
+                      {/* Card Title */}
+                      <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 mb-2 group-hover:text-[#1279CF] transition-colors leading-snug">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-600 group-hover:text-slate-700 leading-relaxed mt-1">
-                        {item.desc}
+
+                      {/* Card Description */}
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal mb-3">
+                        {item.description}
                       </p>
+
+                      {/* Key Verification Bullet */}
+                      <div className="flex items-center gap-2 pt-2.5 border-t border-slate-200/60 text-xs font-semibold text-slate-800">
+                        <FiCheckCircle className={`w-3.5 h-3.5 ${item.pillIconColor}`} />
+                        <span>Standardized UPEMA Trade Protocol</span>
+                      </div>
+
                     </div>
+
                   </div>
-                );
-              })}
-            </div>
-
-            {/* Action CTA Button Row */}
-            <div className="pt-3 flex items-center gap-4">
-              <Link
-                to="/membership"
-                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#1279CF] hover:bg-[#0D3B66] text-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-blue-500/20 hover:shadow-blue-500/35 transition-all duration-200"
-              >
-                <span>Join UPEMA Today</span>
-                <FiArrowRight className="w-4 h-4" />
-              </Link>
-
-              <Link
-                to="/about/governing-body"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#1279CF] uppercase tracking-wider px-4 py-3 transition-colors"
-              >
-                <span>Learn Rules & Bylaws</span>
-                <FiArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
+                </motion.div>
+              )
+            })}
           </div>
 
         </div>
+
+        {/* Bottom CTA Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex flex-wrap items-center justify-center gap-4 pt-12 sm:pt-16"
+        >
+          {/* Primary Navy Button -> Links to /membership */}
+          <Link
+            to="/membership"
+            className="px-8 py-3.5 rounded-xl bg-[#0D2238] text-white hover:bg-[#1279CF] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg flex items-center gap-2 cursor-pointer group"
+          >
+            <span>Join UPEMA Today</span>
+            <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+
+          {/* Secondary Gold Border Button -> Links to /about/governing-body */}
+          <Link
+            to="/about/governing-body"
+            className="px-8 py-3.5 rounded-xl bg-white text-slate-900 border-2 border-[#C9A45C] hover:bg-[#0D2238] hover:text-white hover:border-[#0D2238] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm cursor-pointer"
+          >
+            <span>Learn Rules & Bylaws</span>
+          </Link>
+        </motion.div>
 
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default BenefitsSection;
+export default BenefitsSection

@@ -1,305 +1,228 @@
-// // src/Components/HomeComponents/AboutSection.jsx
-// import React from 'react';
-// import { FiCalendar, FiMapPin, FiUsers, FiTarget, FiEye } from 'react-icons/fi';
+import React, { useState, useEffect, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { 
+  FiShield, 
+  FiFileText, 
+  FiAward, 
+  FiArrowRight 
+} from 'react-icons/fi'
+import aboutWeddingImg from '../../assets/images/hero4.jpg';
 
-// const AboutSection = () => {
-//   return (
-//     <section className="relative z-20 bg-white py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
-//       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        
-//         {/* Top Centered Heading & Badge */}
-//         <div className="text-center max-w-3xl mx-auto mb-16">
-//           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-[#1279CF] text-xs sm:text-sm font-semibold tracking-wider uppercase mb-4">
-//             <span className="text-[#F8C54E]">✦</span>
-//             <span>About Our Association</span>
-//           </div>
+// Smooth Count-Up Animated Number Component
+const AnimatedCounter = ({ target, suffix = '+' }) => {
+  const [count, setCount] = useState(0)
+  const containerRef = useRef(null)
+  const isInView = useInView(containerRef, { once: true, margin: '-50px' })
 
-//           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-//             Uttar Pradesh Event Management Association – <span className="text-[#1279CF]">UPEMA</span>
-//           </h2>
+  useEffect(() => {
+    if (isInView) {
+      let start = 0
+      const duration = 1600 // 1.6 seconds total
+      const steps = 40
+      const increment = target / steps
+      const stepTime = duration / steps
 
-//           <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium">
-//             Strengthening Event & Wedding Industry Standards Through Networking, Innovation & Growth across Uttar Pradesh
-//           </p>
-//         </div>
+      const timer = setInterval(() => {
+        start += increment
+        if (start >= target) {
+          setCount(target)
+          clearInterval(timer)
+        } else {
+          setCount(Math.floor(start))
+        }
+      }, stepTime)
 
-//         {/* 2-Column Main Content Layout */}
-//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          
-//           {/* Left Column: 3 Quick Info Cards (4 Cols) */}
-//           <div className="lg:col-span-4 flex flex-col gap-5">
-            
-//             {/* Card 1 */}
-//             <div className="bg-slate-50/70 border border-slate-200/80 hover:border-[#1279CF]/50 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-300 group">
-//               <div className="w-10 h-10 mx-auto rounded-full bg-blue-50 text-[#1279CF] flex items-center justify-center mb-3 group-hover:bg-[#1279CF] group-hover:text-white transition-colors duration-300">
-//                 <FiCalendar className="w-5 h-5" />
-//               </div>
-//               <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-//                 Association Launched
-//               </span>
-//               <h3 className="text-2xl font-bold text-[#1279CF] mt-1">
-//                 May 31, 2025
-//               </h3>
-//               <p className="text-xs text-slate-500 mt-1 font-medium">
-//                 Inaugurated in Lucknow
-//               </p>
-//             </div>
+      return () => clearInterval(timer)
+    }
+  }, [isInView, target])
 
-//             {/* Card 2 */}
-//             <div className="bg-slate-50/70 border border-slate-200/80 hover:border-[#1279CF]/50 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-300 group">
-//               <div className="w-10 h-10 mx-auto rounded-full bg-amber-50 text-[#d49a24] flex items-center justify-center mb-3 group-hover:bg-[#F8C54E] group-hover:text-slate-900 transition-colors duration-300">
-//                 <FiMapPin className="w-5 h-5" />
-//               </div>
-//               <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-//                 Coverage Area
-//               </span>
-//               <h3 className="text-2xl font-bold text-[#1279CF] mt-1">
-//                 Uttar Pradesh
-//               </h3>
-//               <p className="text-xs text-slate-500 mt-1 font-medium">
-//                 Lucknow, Noida, Varanasi & Beyond
-//               </p>
-//             </div>
-
-//             {/* Card 3 */}
-//             <div className="bg-slate-50/70 border border-slate-200/80 hover:border-[#1279CF]/50 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-300 group">
-//               <div className="w-10 h-10 mx-auto rounded-full bg-blue-50 text-[#1279CF] flex items-center justify-center mb-3 group-hover:bg-[#1279CF] group-hover:text-white transition-colors duration-300">
-//                 <FiUsers className="w-5 h-5" />
-//               </div>
-//               <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-//                 Fraternity Leadership
-//               </span>
-//               <h3 className="text-2xl font-bold text-[#1279CF] mt-1">
-//                 Executive Body
-//               </h3>
-//               <p className="text-xs text-slate-500 mt-1 font-medium">
-//                 Unified Voice & Trade Advocacy
-//               </p>
-//             </div>
-
-//           </div>
-
-//           {/* Right Column: Narrative & Mission/Vision (8 Cols) */}
-//           <div className="lg:col-span-8 flex flex-col justify-between h-full space-y-8">
-            
-//             {/* Descriptive Content */}
-//             <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-//               <p>
-//                 <strong className="text-slate-900 font-semibold">Uttar Pradesh Event Management Association (UPEMA)</strong> is the apex trade body launched on <strong className="text-slate-900 font-semibold">May 31, 2025</strong> in Lucknow, dedicated to empowering and unifying the vibrant event, wedding planning, and entertainment ecosystem across the state.
-//               </p>
-              
-//               <p>
-//                 The association brings together industry pioneers — including wedding planners, experiential event firms, decor fabricators, production houses, sound and light engineers, and venue stakeholders. UPEMA works tirelessly to standardize fair trade practices, ensure safety and licensing protocols, provide advanced skill development, and promote Uttar Pradesh as a world-class destination for luxury weddings and summits.
-//               </p>
-
-//               <p>
-//                 Through state-wide networking conclaves, vendor collaborations, and policy advocacy with regulatory bodies, UPEMA acts as the trusted collective voice fostering business sustainability and economic growth for all members.
-//               </p>
-//             </div>
-
-//             {/* Bottom 2-Box Mission & Vision Grid */}
-//             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-              
-//               {/* Mission Box */}
-//               <div className="p-6 rounded-xl bg-blue-50/50 border border-blue-100 hover:border-[#1279CF]/40 transition-all duration-300">
-//                 <div className="flex items-center gap-2.5 mb-3 text-[#1279CF]">
-//                   <FiTarget className="w-5 h-5" />
-//                   <h4 className="text-base font-bold uppercase tracking-wider">Our Mission</h4>
-//                 </div>
-//                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-//                   To elevate operational standards, foster fair business ethics, provide continuous learning, and build unified collaboration across the event and wedding management ecosystem of Uttar Pradesh.
-//                 </p>
-//               </div>
-
-//               {/* Vision Box */}
-//               <div className="p-6 rounded-xl bg-amber-50/40 border border-amber-200/60 hover:border-[#F8C54E] transition-all duration-300">
-//                 <div className="flex items-center gap-2.5 mb-3 text-[#d49a24]">
-//                   <FiEye className="w-5 h-5" />
-//                   <h4 className="text-base font-bold uppercase tracking-wider text-slate-900">Our Vision</h4>
-//                 </div>
-//                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-//                   To establish Uttar Pradesh as the country's most preferred, world-class hub for destination weddings, luxury celebrations, and mega corporate conventions with standardized industry benchmarks.
-//                 </p>
-//               </div>
-
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AboutSection;
-
-
-// src/Components/HomeComponents/AboutSection.jsx
-import React from 'react';
-import { FiCalendar, FiMapPin, FiUsers, FiTarget, FiEye, FiCheckCircle } from 'react-icons/fi';
+  return (
+    <span ref={containerRef}>
+      {count}{suffix}
+    </span>
+  )
+}
 
 const AboutSection = () => {
   return (
-    <section className="relative z-20 bg-white pt-8 sm:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
+      
+      {/* Background Decorative Ambient Glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#1279CF]/8 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-[#C9A45C]/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* Top Centered Heading & Badge */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 text-[#1279CF] text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 shadow-sm">
-            <span className="text-[#D4A359]">✦</span>
-            <span>About Our Association</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight leading-tight">
-            Uttar Pradesh Event Management Association – <span className="text-[#1279CF]">UPEMA</span>
-          </h2>
-
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-slate-600 font-medium">
-            Strengthening Event & Wedding Industry Standards Through Networking, Innovation & Growth across{' '}
-            <span className="font-serif italic font-bold text-[#D4A359]">Uttar Pradesh</span>
-          </p>
+        {/* 1. TOP CENTERED EYEBROW BADGE (Matching PillarsSection & BenefitsSection Header) */}
+        <div className="text-center mb-3">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 text-[#1279CF] text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-sm"
+          >
+            <span>🏛️</span>
+            <span>ABOUT UPEMA</span>
+          </motion.div>
         </div>
 
-        {/* 2-Column Main Content Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        {/* 2. MAIN HEADLINE (Matching PillarsSection Typography & Highlight Style) */}
+        <motion.h2
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight text-center max-w-4xl mx-auto mb-12"
+        >
+          We Are The Voice of Uttar Pradesh’s{' '}
+          <span className="text-[#1279CF]">Event Fraternity</span>
+        </motion.h2>
+
+        {/* 3. TWO-COLUMN CORE CONTENT LAYOUT */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-12">
           
-          {/* Left Column: 3 Info Cards (4 Cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-4">
-            
-            {/* Card 1: Launch Date (Primary Royal Card) */}
-            <div className="bg-gradient-to-br from-[#0D3B66] to-[#071322] text-white p-6 rounded-2xl shadow-lg border border-slate-700/60 transition-all duration-300 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#1279CF]/20 rounded-full blur-xl pointer-events-none" />
-              
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white/10 text-[#D4A359] flex items-center justify-center flex-shrink-0 text-xl border border-white/10 group-hover:scale-110 transition-transform">
-                  <FiCalendar className="w-6 h-6" />
-                </div>
-                <div>
-                  <span className="text-[11px] font-bold text-[#D4A359] uppercase tracking-wider block">
-                    Association Inception
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-white mt-0.5">
-                    May 31, 2025
-                  </h3>
-                  <p className="text-xs text-slate-300 mt-0.5 font-medium">
-                    Inaugurated in Lucknow
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Coverage Area */}
-            <div className="bg-[#F0F6FB] border border-[#D5E5F2] hover:border-[#1279CF]/40 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 group">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white text-[#1279CF] flex items-center justify-center flex-shrink-0 text-xl shadow-sm group-hover:bg-[#1279CF] group-hover:text-white transition-colors duration-300">
-                  <FiMapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block">
-                    Coverage Area
-                  </span>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors mt-0.5">
-                    25+ Districts
-                  </h3>
-                  <p className="text-xs text-slate-600 mt-0.5 font-medium">
-                    Lucknow, Noida, Varanasi & Beyond
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Fraternity Leadership */}
-            <div className="bg-[#F0F6FB] border border-[#D5E5F2] hover:border-[#1279CF]/40 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 group">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white text-[#D4A359] flex items-center justify-center flex-shrink-0 text-xl shadow-sm group-hover:bg-[#0D3B66] group-hover:text-[#D4A359] transition-colors duration-300">
-                  <FiUsers className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block">
-                    Fraternity Leadership
-                  </span>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors mt-0.5">
-                    Executive Body
-                  </h3>
-                  <p className="text-xs text-slate-600 mt-0.5 font-medium">
-                    Unified Voice & Policy Advocacy
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right Column: Narrative & Mission/Vision (8 Cols) */}
-          <div className="lg:col-span-8 flex flex-col justify-between space-y-6">
-            
-            {/* Descriptive Content */}
-            <div className="space-y-3.5 text-slate-600 text-sm sm:text-base leading-relaxed">
-              <p>
-                <strong className="text-slate-900 font-bold">Uttar Pradesh Event Management Association (UPEMA)</strong> is the apex trade body launched on <strong className="text-[#0D3B66] font-semibold">May 31, 2025</strong> in Lucknow, dedicated to empowering and unifying the vibrant event, wedding planning, and entertainment ecosystem across the state.
+          {/* LEFT COLUMN: LARGE GOLD DROP CAP "U" & ENHANCED NARRATIVE */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-6 flex flex-col justify-between h-full"
+          >
+            {/* Expanded Paragraph with Large Prominent Gold Drop Cap "U" */}
+            {/* <div className="mb-8 overflow-hidden">
+              <span className="float-left text-7xl sm:text-8xl md:text-[88px] font-extrabold font-serif text-[#C9A45C] leading-none pr-4 sm:pr-5 pt-1 select-none drop-shadow-sm">
+                U
+              </span>
+              <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-normal">
+                <strong className="text-slate-900 font-bold">PEMA</strong> stands as the definitive collective for Uttar Pradesh's professional event industry—uniting planners, designers, suppliers, and creators under one recognized chamber. We advocate for excellence, strategic collaboration, and sustainable trade growth across weddings, corporate conclaves, exhibitions, and cultural productions, ensuring our fraternity is respected, statutory cleared, regulated, and future-ready across all 75 districts.
               </p>
-              
-              <p>
-                The association brings together industry pioneers — including wedding planners, experiential event firms, decor fabricators, production houses, sound and light engineers, and venue stakeholders. UPEMA works tirelessly to standardize fair trade practices, ensure safety protocols, provide advanced skill development, and promote Uttar Pradesh as a world-class destination for luxury weddings and summits.
-              </p>
+            </div> */}
+            <div className="mb-8">
+  <span className="float-left text-[92px] sm:text-[105px] lg:text-[115px] font-black font-serif text-[#C9A45C] leading-[0.8] pr-4 sm:pr-5 select-none drop-shadow-sm inline-block">
+    U
+  </span>
+  <p className="text-slate-700 text-sm sm:text-base md:text-[16px] leading-[1.65] font-normal text-justify">
+    <strong className="text-slate-900 font-bold">PEMA</strong> stands as the definitive collective for Uttar Pradesh's professional event industry—uniting planners, designers, suppliers, and creators under one recognized chamber. We advocate for excellence, strategic collaboration, and sustainable trade growth across weddings, corporate conclaves, exhibitions, and cultural productions, ensuring our fraternity is respected, statutory cleared, regulated, and future-ready across all 75 districts.
+  </p>
+</div>
 
-              {/* 3 Quick Value Badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
-                <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
-                  <FiCheckCircle className="text-[#1279CF] w-4 h-4 flex-shrink-0" />
-                  <span>Single-Window Event Permissions</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
-                  <FiCheckCircle className="text-[#1279CF] w-4 h-4 flex-shrink-0" />
-                  <span>Certified Technical Rigging Safety</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom 2-Box Mission & Vision Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+            {/* 3 Key Pillar Feature Cards with Blue & White Theme Icons */}
+            <div className="grid grid-cols-3 gap-3 pt-6 border-t border-slate-300/80">
               
-              {/* Mission Box */}
-              <div className="p-6 rounded-2xl bg-white border-2 border-blue-100 hover:border-[#1279CF]/60 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex items-center gap-2.5 mb-2.5 text-[#1279CF]">
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-                    <FiTarget className="w-4 h-4" />
-                  </div>
-                  <h4 className="text-sm sm:text-base font-bold uppercase tracking-wider text-slate-900">
-                    Our Mission
-                  </h4>
+              {/* Pillar 1 */}
+              <div className="p-3 rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-blue-100 transition-all duration-300 group cursor-pointer text-center">
+                <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-50 border border-blue-200/60 text-[#1279CF] group-hover:bg-[#1279CF] group-hover:text-white flex items-center justify-center text-2xl mb-3 shadow-sm transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
+                  <FiAward />
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  To elevate operational standards, foster fair business ethics, provide continuous learning, and build unified collaboration across UP's event fraternity.
-                </p>
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug">
+                  Government <br /> Recognized
+                </h4>
               </div>
 
-              {/* Vision Box */}
-              <div className="p-6 rounded-2xl bg-white border-2 border-amber-100 hover:border-[#D4A359] shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex items-center gap-2.5 mb-2.5 text-[#D4A359]">
-                  <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center">
-                    <FiEye className="w-4 h-4 text-[#D4A359]" />
-                  </div>
-                  <h4 className="text-sm sm:text-base font-bold uppercase tracking-wider text-slate-900">
-                    Our Vision
-                  </h4>
+              {/* Pillar 2 */}
+              <div className="p-3 rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-blue-100 transition-all duration-300 group cursor-pointer text-center border-x border-slate-300/60">
+                <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-50 border border-blue-200/60 text-[#1279CF] group-hover:bg-[#1279CF] group-hover:text-white flex items-center justify-center text-2xl mb-3 shadow-sm transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
+                  <FiFileText />
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  To establish Uttar Pradesh as the premier global destination for luxury heritage weddings, corporate conclaves, and experiential summits.
-                </p>
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug">
+                  Single Window <br /> Permissions
+                </h4>
+              </div>
+
+              {/* Pillar 3 */}
+              <div className="p-3 rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-blue-100 transition-all duration-300 group cursor-pointer text-center">
+                <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-50 border border-blue-200/60 text-[#1279CF] group-hover:bg-[#1279CF] group-hover:text-white flex items-center justify-center text-2xl mb-3 shadow-sm transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
+                  <FiShield />
+                </div>
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug">
+                  Safety <br /> Norms
+                </h4>
               </div>
 
             </div>
+          </motion.div>
 
-          </div>
+          {/* RIGHT COLUMN: ORNATE GOLD-FRAMED PHOTO & OVERLAPPING STAT CARD WITH COUNT-UP ANIMATION */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-6 relative"
+          >
+            {/* Ornate Gold Border Image Wrapper */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-[#C9A45C] bg-slate-900 p-1">
+              <img
+                src={aboutWeddingImg}
+                alt="Royal Wedding & Event Production Staging"
+                className="w-full h-[340px] sm:h-[400px] object-cover rounded-xl hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+
+            {/* Overlapping Frosted Glass Stat Card (Bottom-Right) with Animated Count-Up Numbers */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="absolute -bottom-5 -right-2 sm:-right-5 w-[190px] sm:w-[220px] rounded-2xl bg-white/90 backdrop-blur-md border border-white/80 shadow-2xl p-4 sm:p-5 text-center z-20"
+            >
+              {/* Stat 1: Animated Count-Up to 300+ */}
+              <div className="pb-2.5 border-b border-[#C9A45C]/40">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#0D2238] block leading-none font-sans">
+                  <AnimatedCounter target={300} suffix="+" />
+                </span>
+                <span className="text-xs font-semibold text-slate-600 block mt-1 uppercase tracking-wider">
+                  Enterprises
+                </span>
+              </div>
+
+              {/* Stat 2: Animated Count-Up to 25+ */}
+              <div className="pt-2.5">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#0D2238] block leading-none font-sans">
+                  <AnimatedCounter target={25} suffix="+" />
+                </span>
+                <span className="text-xs font-semibold text-slate-600 block mt-1 uppercase tracking-wider">
+                  Districts
+                </span>
+              </div>
+            </motion.div>
+          </motion.div>
 
         </div>
+
+        {/* 4. BOTTOM ACTION BUTTONS */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex flex-wrap items-center justify-center gap-4 pt-4"
+        >
+          {/* Primary Navy Button -> Links to /about/history */}
+          <Link
+            to="/about/history"
+            className="px-8 py-3.5 rounded-xl bg-[#0D2238] text-white hover:bg-[#1279CF] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg flex items-center gap-2 cursor-pointer group"
+          >
+            <span>Know Our Journey</span>
+            <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+
+          {/* Secondary Gold Border Button -> Links to /about/governing-body */}
+          <Link
+            to="/about/governing-body"
+            className="px-8 py-3.5 rounded-xl bg-white text-slate-900 border-2 border-[#C9A45C] hover:bg-[#0D2238] hover:text-white hover:border-[#0D2238] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm cursor-pointer"
+          >
+            <span>Meet Leadership</span>
+          </Link>
+        </motion.div>
 
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection
