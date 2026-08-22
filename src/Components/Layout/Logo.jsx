@@ -7,14 +7,23 @@ const Logo = ({ className = "" }) => {
   return (
     <div className={`flex items-center gap-2 sm:gap-3.5 group cursor-pointer ${className}`}>
       {!imgError ? (
-        <div className="relative flex-shrink-0">
-          <img
-            src={logoImg}
-            alt="UPEMA Logo"
-            onError={() => setImgError(true)}
-            className="h-11 sm:h-16 md:h-20 w-auto object-contain rounded-md shadow-sm border border-amber-200/50 group-hover:border-[#C59A4A] transition-all duration-300"
-          />
-        </div>
+        // <div className="relative flex-shrink-0">
+        //   <img
+        //     src={logoImg}
+        //     alt="UPEMA Logo"
+        //     onError={() => setImgError(true)}
+        //     className="h-11 sm:h-16 md:h-20 w-auto object-contain rounded-md shadow-sm border border-amber-200/50 group-hover:border-[#C59A4A] transition-all duration-300"
+        //   />
+        // </div>
+
+        <div className="relative flex-shrink-0 flex items-center">
+  <img
+    src={logoImg}
+    alt="UPEMA Logo"
+    onError={() => setImgError(true)}
+    className="h-11 sm:h-16 md:h-20 w-auto object-contain mix-blend-multiply transition-all duration-300 select-none"
+  />
+</div>
       ) : (
         /* Royal SVG Crest Logo Placeholder */
         <div className="relative flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#111827] rounded-lg p-1.5 sm:p-2.5 flex items-center justify-center border-2 border-[#C59A4A] shadow-md group-hover:shadow-lg transition-all duration-300">
@@ -32,14 +41,14 @@ const Logo = ({ className = "" }) => {
       )}
 
       {/* Association Name & Tagline */}
-      <div className="flex flex-col">
+      {/* <div className="flex flex-col">
         <h1 className="font-serif-title text-[#1F2937] font-bold text-xs sm:text-lg md:text-[22px] leading-tight tracking-tight group-hover:text-[#111827] transition-colors">
           Uttar Pradesh Event Management Association
         </h1>
         <span className="text-[#6B7280] font-sans-body text-[8px] sm:text-xs md:text-[13px] font-medium tracking-wider uppercase mt-0.5">
           Connecting <span className="text-[#C59A4A] mx-0.5 sm:mx-1">•</span> Collaborating <span className="text-[#C59A4A] mx-0.5 sm:mx-1">•</span> Growing
         </span>
-      </div>
+      </div> */}
     </div>
   )
 }

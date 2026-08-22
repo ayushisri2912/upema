@@ -102,12 +102,21 @@ const AboutSection = () => {
             </div> */}
             <div className="mb-8">
   <span className="float-left text-[92px] sm:text-[105px] lg:text-[115px] font-black font-serif text-[#C9A45C] leading-[0.8] pr-4 sm:pr-5 select-none drop-shadow-sm inline-block">
-    U
+    UP
   </span>
   <p className="text-slate-700 text-sm sm:text-base md:text-[16px] leading-[1.65] font-normal text-justify">
-    <strong className="text-slate-900 font-bold">PEMA</strong> stands as the definitive collective for Uttar Pradesh's professional event industry—uniting planners, designers, suppliers, and creators under one recognized chamber. We advocate for excellence, strategic collaboration, and sustainable trade growth across weddings, corporate conclaves, exhibitions, and cultural productions, ensuring our fraternity is respected, statutory cleared, regulated, and future-ready across all 75 districts.
+    <strong className="text-slate-900 font-bold">EMA</strong> stands as the definitive collective for Uttar Pradesh's professional event industry—uniting planners, designers, suppliers, and creators under one recognized chamber. We advocate for excellence, strategic collaboration, and sustainable trade growth across weddings, corporate conclaves, exhibitions, and cultural productions, ensuring our fraternity is respected, statutory cleared, regulated, and future-ready across all 75 districts.
   </p>
 </div>
+{/* <div className="mb-8">
+  <span className="float-left text-[80px] sm:text-[95px] lg:text-[105px] font-black font-serif text-[#C9A45C] leading-[0.8] pr-3 sm:pr-4 select-none drop-shadow-sm tracking-tight inline-block">
+    UP
+  </span>
+  <p className="text-slate-700 text-sm sm:text-base md:text-[16px] leading-[1.65] font-normal text-justify">
+    <strong className="text-slate-900 font-bold">EMA</strong> stands as the definitive collective for Uttar Pradesh's professional event industry—uniting planners, designers, suppliers, and creators under one recognized chamber. We advocate for excellence, strategic collaboration, and sustainable trade growth across weddings, corporate conclaves, exhibitions, and cultural productions, ensuring our fraternity is respected, statutory cleared, regulated, and future-ready across all 75 districts.
+  </p>
+</div> */}
+
 
             {/* 3 Key Pillar Feature Cards with Blue & White Theme Icons */}
             <div className="grid grid-cols-3 gap-3 pt-6 border-t border-slate-300/80">

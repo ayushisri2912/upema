@@ -42,9 +42,14 @@ const DirectoryHero = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight font-serif"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
         >
-          Find Trusted Event Professionals Across Uttar Pradesh
+          <span className="bg-gradient-to-r from-[#FFEBB0] via-[#DDB063] to-[#C99846] bg-clip-text text-transparent drop-shadow-sm">
+            Find Trusted Event Professionals Across
+          </span>{' '}
+          <span className="font-serif italic font-bold bg-gradient-to-r from-[#FFEBB0] via-[#E2B768] to-[#C99846] bg-clip-text text-transparent">
+            Uttar Pradesh
+          </span>
         </motion.h1>
 
         {/* Thin Gold Accent Line Below Heading */}

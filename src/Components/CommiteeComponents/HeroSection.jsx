@@ -37,9 +37,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight"
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
         >
-          Executive Committee
+          <span className="bg-gradient-to-r from-[#FFEBB0] via-[#DDB063] to-[#C99846] bg-clip-text text-transparent drop-shadow-sm">
+            Executive
+          </span>{' '}
+          <span className="font-serif italic font-bold bg-gradient-to-r from-[#FFEBB0] via-[#E2B768] to-[#C99846] bg-clip-text text-transparent">
+            Committee
+          </span>
         </motion.h1>
 
         {/* Thin Gold Accent Line Below Heading */}

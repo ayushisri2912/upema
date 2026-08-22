@@ -1,11 +1,3 @@
-import React from 'react'
+import PhotoGallery from './Events/PhotoGallery'
 
-const EventsGallery = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default EventsGallery
+export default PhotoGallery

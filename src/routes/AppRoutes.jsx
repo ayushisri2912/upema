@@ -10,6 +10,14 @@ import MemberDirectory from '../pages/MemberDirectory'
 import EventsGallery from '../pages/EventsGallery'
 import NewsAnnouncements from '../pages/NewsAnnouncements'
 import Contact from '../pages/Contact'
+import UpcomingEvents from '../pages/Events/UpcomingEvents'
+import PastEvents from '../pages/Events/PastEvents'
+import PhotoGallery from '../pages/Events/PhotoGallery'
+import VideoHighlights from '../pages/Events/VideoHighlights'
+import LatestNews from '../pages/News/LatestNews'
+import Announcements from '../pages/News/Announcements'
+import Circulars from '../pages/News/Circulars'
+import PressReleases from '../pages/News/PressReleases'
 
 const AppRoutes = () => {
   return (
@@ -22,10 +30,18 @@ const AppRoutes = () => {
       <Route path="/membership/why-become-member" element={<WhyBecomeMembers />} />
       <Route path="/executive-committee" element={<ExecutiveCommittee />} />
       <Route path="/member-directory" element={<MemberDirectory />} />
-      <Route path="/events" element={<EventsGallery />} />
-      <Route path="/events/*" element={<EventsGallery />} />
-      <Route path="/news" element={<NewsAnnouncements />} />
-      <Route path="/news/*" element={<NewsAnnouncements />} />
+      <Route path="/events" element={<UpcomingEvents />} />
+      <Route path="/events/upcoming" element={<UpcomingEvents />} />
+      <Route path="/events/past" element={<PastEvents />} />
+      <Route path="/events/gallery" element={<PhotoGallery />} />
+      <Route path="/events/highlights" element={<VideoHighlights />} />
+      <Route path="/events/*" element={<PhotoGallery />} />
+      <Route path="/news" element={<LatestNews />} />
+      <Route path="/news/latest" element={<LatestNews />} />
+      <Route path="/news/announcements" element={<Announcements />} />
+      <Route path="/news/circulars" element={<Circulars />} />
+      <Route path="/news/press-releases" element={<PressReleases />} />
+      <Route path="/news/*" element={<LatestNews />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
   )

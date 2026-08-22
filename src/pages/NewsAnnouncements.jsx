@@ -1,11 +1,3 @@
-import React from 'react'
+import LatestNews from './News/LatestNews'
 
-const NewsAnnouncements = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default NewsAnnouncements
+export default LatestNews
