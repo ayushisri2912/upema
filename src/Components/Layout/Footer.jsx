@@ -457,19 +457,18 @@ const Footer = () => {
               href="https://codecrafter.co.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4A359] hover:text-[#e2b56e] transition-all duration-300 hover:scale-105 cursor-pointer group"
+              className="inline-flex items-center transition-all duration-300 hover:scale-105 cursor-pointer"
               title="Visit CodeCrafter"
             >
               <img
                 src={codecrafterLogo}
                 alt="CodeCrafter"
-                className="h-6 w-auto object-contain transition-all"
+                className="h-7 w-auto object-contain transition-all"
                 style={{
-                  filter: 'brightness(0) saturate(100%) invert(73%) sepia(45%) saturate(600%) hue-rotate(350deg)',
+                  filter: 'brightness(0) saturate(100%) invert(75%) sepia(60%) saturate(800%) hue-rotate(350deg)',
                   mixBlendMode: 'screen',
                 }}
               />
-              <span className="tracking-wide font-sans">CodeCrafter</span>
             </a>
           </div>
 
