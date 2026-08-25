@@ -449,17 +449,28 @@ const Footer = () => {
           </p>
 
           {/* Center: CodeCrafter Branding */}
-          <div className="flex items-center gap-2.5 text-center flex-wrap justify-center">
+          <div className="flex items-center gap-2 text-center flex-wrap justify-center">
             <span className="text-[11px] text-zinc-400 font-normal">
               Precision Crafted with Digital Intelligence by
             </span>
-            <div className="bg-white px-2.5 py-1 rounded-md border border-zinc-700/60 shadow-sm flex items-center justify-center">
+            <a
+              href="https://codecrafter.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4A359] hover:text-[#e2b56e] transition-all duration-300 hover:scale-105 cursor-pointer group"
+              title="Visit CodeCrafter"
+            >
               <img
                 src={codecrafterLogo}
                 alt="CodeCrafter"
-                className="h-6 w-auto object-contain"
+                className="h-6 w-auto object-contain transition-all"
+                style={{
+                  filter: 'brightness(0) saturate(100%) invert(73%) sepia(45%) saturate(600%) hue-rotate(350deg)',
+                  mixBlendMode: 'screen',
+                }}
               />
-            </div>
+              <span className="tracking-wide font-sans">CodeCrafter</span>
+            </a>
           </div>
 
           {/* Right: Policy Links */}
