@@ -447,15 +447,7 @@ const Footer = () => {
             <Link to="/terms" className="hover:text-[#D4A359] transition-colors cursor-pointer">
               Terms of Use
             </Link>
-            
-            {/* Scroll to Top Button */}
-            <button
-              onClick={scrollToTop}
-              aria-label="Scroll to top"
-              className="ml-2 w-8 h-8 rounded-full bg-[#D4A359] hover:bg-[#C2934A] text-[#071322] flex items-center justify-center shadow-md transition-all duration-300 hover:scale-110 cursor-pointer"
-            >
-              <FiChevronUp className="w-4 h-4 font-bold" />
-            </button>
+           
           </div>
         </div>
 
