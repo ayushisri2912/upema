@@ -469,9 +469,7 @@ const Footer = () => {
                   mixBlendMode: 'screen',
                 }}
               />
-              <span className="tracking-wide text-xs font-extrabold text-[#E5A825] font-sans">
-                CodeCrafter
-              </span>
+            
             </a>
           </div>
 
