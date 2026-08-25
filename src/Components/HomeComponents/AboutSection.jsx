@@ -46,13 +46,13 @@ const AnimatedCounter = ({ target, suffix = '+' }) => {
 
 const AboutSection = () => {
   return (
-    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
+    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 bg-white border-t border-slate-100">
       
       {/* Background Decorative Ambient Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#1279CF]/8 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-[#C9A45C]/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* 1. TOP CENTERED EYEBROW BADGE (Matching PillarsSection & BenefitsSection Header) */}
         <div className="text-center mb-3">
@@ -119,34 +119,34 @@ const AboutSection = () => {
 
 
             {/* 3 Key Pillar Feature Cards with Blue & White Theme Icons */}
-            <div className="grid grid-cols-3 gap-3 pt-6 border-t border-slate-300/80">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-slate-300/80">
               
               {/* Pillar 1 */}
-              <div className="p-3 rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-blue-100 transition-all duration-300 group cursor-pointer text-center">
-                <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-50 border border-blue-200/60 text-[#1279CF] group-hover:bg-[#1279CF] group-hover:text-white flex items-center justify-center text-2xl mb-3 shadow-sm transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
+              <div className="fraternity-feature-card">
+                <div className="icon-wrapper">
                   <FiAward />
                 </div>
-                <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
                   Government <br /> Recognized
                 </h4>
               </div>
 
               {/* Pillar 2 */}
-              <div className="p-3 rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-blue-100 transition-all duration-300 group cursor-pointer text-center border-x border-slate-300/60">
-                <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-50 border border-blue-200/60 text-[#1279CF] group-hover:bg-[#1279CF] group-hover:text-white flex items-center justify-center text-2xl mb-3 shadow-sm transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
+              <div className="fraternity-feature-card">
+                <div className="icon-wrapper">
                   <FiFileText />
                 </div>
-                <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
                   Single Window <br /> Permissions
                 </h4>
               </div>
 
               {/* Pillar 3 */}
-              <div className="p-3 rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-blue-100 transition-all duration-300 group cursor-pointer text-center">
-                <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-50 border border-blue-200/60 text-[#1279CF] group-hover:bg-[#1279CF] group-hover:text-white flex items-center justify-center text-2xl mb-3 shadow-sm transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
+              <div className="fraternity-feature-card">
+                <div className="icon-wrapper">
                   <FiShield />
                 </div>
-                <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#1279CF] transition-colors leading-snug">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
                   Safety <br /> Norms
                 </h4>
               </div>

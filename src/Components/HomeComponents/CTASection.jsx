@@ -10,7 +10,7 @@ import { FiArrowRight, FiPhoneCall } from 'react-icons/fi';
 const CTASection = () => {
   return (
     <section
-      className="relative bg-cover bg-center bg-fixed py-20 sm:py-24 px-3 sm:px-5 lg:px-7 flex items-center justify-center overflow-hidden"
+      className="relative bg-cover bg-center bg-fixed py-20 sm:py-24 flex items-center justify-center overflow-hidden"
       style={{
         // Parallax background image (Meeting / Blueprint / Grand Venue setup)
         backgroundImage: "url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1800&q=80')",
@@ -20,7 +20,7 @@ const CTASection = () => {
       <div className="absolute inset-0 bg-[#050B14]/65 backdrop-blur-[1px]" />
 
       {/* Main Floating Rounded Container (Matching DSS Style) */}
-      <div className="relative z-10 max-w-6xl w-full mx-auto bg-gradient-to-r from-[#071322] via-[#0A1B30] to-[#071322] border border-slate-700/70 rounded-[2.5rem] p-8 sm:p-12 lg:p-14 shadow-2xl shadow-black/80 overflow-hidden">
+      <div className="relative z-10 max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#071322] via-[#0A1B30] to-[#071322] border border-slate-700/70 rounded-[2.5rem] p-8 sm:p-12 lg:p-14 shadow-2xl shadow-black/80 overflow-hidden">
         
         {/* Top-Left Ambient Amber Glow (Matching reference image) */}
         <div className="absolute -top-16 -left-16 w-64 h-64 bg-[#F8C54E]/20 rounded-full blur-[90px] pointer-events-none" />

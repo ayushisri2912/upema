@@ -46,8 +46,8 @@ const officeBearersData = {
 
 const OfficeBearers = () => {
   return (
-    <section className="w-full bg-[#F9FAFB] py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
-      <div className="max-w-6xl mx-auto">
+    <section className="w-full bg-[#F9FAFB] py-16 md:py-24 border-b border-slate-100">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">

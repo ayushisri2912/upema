@@ -37,7 +37,7 @@ const newsItems = [
 
 const LatestNewsSection = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/70">
+    <section className="py-24 bg-slate-50 border-t border-slate-200/70">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

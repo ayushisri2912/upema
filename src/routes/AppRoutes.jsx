@@ -5,6 +5,7 @@ import OurHistory from '../pages/About/OurHistory'
 import MissionVision from '../pages/About/MissionVision'
 import GoverningBody from '../pages/About/GoverningBody'
 import WhyBecomeMembers from '../pages/MemberShip/WhyBecomeMembers'
+import ApplyForMembership from '../pages/MemberShip/ApplyForMembership'
 import ExecutiveCommittee from '../pages/ExecutiveCommittee'
 import MemberDirectory from '../pages/MemberDirectory'
 import EventsGallery from '../pages/EventsGallery'
@@ -28,6 +29,8 @@ const AppRoutes = () => {
       <Route path="/about/governing-body" element={<GoverningBody />} />
       <Route path="/membership" element={<WhyBecomeMembers />} />
       <Route path="/membership/why-become-member" element={<WhyBecomeMembers />} />
+      <Route path="/membership/apply" element={<ApplyForMembership />} />
+      <Route path="/register" element={<ApplyForMembership />} />
       <Route path="/executive-committee" element={<ExecutiveCommittee />} />
       <Route path="/member-directory" element={<MemberDirectory />} />
       <Route path="/events" element={<UpcomingEvents />} />

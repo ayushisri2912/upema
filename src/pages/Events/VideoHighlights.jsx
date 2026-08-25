@@ -155,7 +155,7 @@ const VideoHighlights = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#C9A45C]/10 rounded-full blur-[130px] pointer-events-none" />
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
           
           {/* Small Gold Eyebrow Badge */}
           <motion.div
@@ -247,7 +247,7 @@ const VideoHighlights = () => {
           2. MINIMAL FEATURED SPOTLIGHT CINEMA BANNER
       ======================================================== */}
       {featuredVideo && (
-        <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20 font-sans">
+        <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20 font-sans">
           <div className="bg-[#0B1F3A] text-white rounded-xl shadow-2xl overflow-hidden border border-[#C9A45C]/40 grid grid-cols-1 lg:grid-cols-12">
             
             {/* Player / Thumbnail Column */}
@@ -318,7 +318,7 @@ const VideoHighlights = () => {
       {/* =========================================================
           3. MINIMAL FILTER & SEARCH BAR
       ======================================================== */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 font-sans">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-10 font-sans">
         <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md border border-[#E7E0D3]">
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
@@ -377,7 +377,7 @@ const VideoHighlights = () => {
       {/* =========================================================
           4. MINIMAL & ELEGANT VIDEO HIGHLIGHTS CARDS GRID
       ======================================================== */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
         
         {filteredVideos.length === 0 ? (
           <div className="bg-white rounded-lg p-10 text-center border border-gray-200 max-w-md mx-auto my-6 font-sans">
@@ -462,7 +462,7 @@ const VideoHighlights = () => {
       {/* =========================================================
           5. SUBMIT VIDEO COVERAGE CTA
       ======================================================== */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
         <div className="bg-[#0B1F3A] text-white rounded-lg p-8 sm:p-10 border border-[#C9A45C]/40 flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-2 text-center md:text-left">

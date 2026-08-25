@@ -14,7 +14,7 @@ const MemberSearch = ({
   handleResetFilters
 }) => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 md:-mt-14 relative z-20 mb-12">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 -mt-10 md:-mt-14 relative z-20 mb-12">
       <div className="bg-white rounded-2xl p-6 md:p-8 border border-[#E5E5E5] shadow-lg">
         
         {/* Panel Header */}

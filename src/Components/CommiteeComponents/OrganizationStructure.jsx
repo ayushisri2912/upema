@@ -39,8 +39,8 @@ const structureNodes = [
 
 const OrganizationStructure = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full bg-white py-16 md:py-24 border-b border-slate-100 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-16">

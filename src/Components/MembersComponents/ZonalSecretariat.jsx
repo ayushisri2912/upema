@@ -6,7 +6,7 @@ import { zonalSecretariats } from '../../data/membersData'
 const ZonalSecretariat = () => {
   return (
     <section className="w-full bg-[#F7F5F0] py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-y border-slate-200">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">

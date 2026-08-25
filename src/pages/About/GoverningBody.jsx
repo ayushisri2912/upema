@@ -169,7 +169,7 @@ const GoverningBody = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-[#C9A45C]/12 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute -bottom-10 right-10 w-96 h-96 bg-[#1279CF]/15 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="max-w-6xl mx-auto text-center relative z-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           
           {/* Top Royal Breadcrumb Pill Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-[#FAF8F2] border border-[#E7E0D3] text-[#081A2B] text-xs font-bold uppercase tracking-widest mb-7 shadow-lg">
@@ -232,8 +232,8 @@ const GoverningBody = () => {
       </section>
 
       {/* 2. Core Apex Office Bearers Cards */}
-      <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 sm:py-24 bg-white">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1279CF] text-xs font-semibold tracking-wider uppercase mb-3 shadow-sm">
@@ -333,8 +333,8 @@ const GoverningBody = () => {
       </section>
 
       {/* 3. Governance Committees Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 sm:py-20 bg-[#F0F6FB] border-t border-blue-100/60">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#9E7A32] text-xs font-semibold tracking-wider uppercase mb-3 shadow-sm">
@@ -377,8 +377,8 @@ const GoverningBody = () => {
       </section>
 
       {/* 4. Zonal Directors & District Advisory Council */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 sm:py-20 bg-white border-t border-slate-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1279CF] text-xs font-semibold tracking-wider uppercase mb-3">
@@ -421,8 +421,8 @@ const GoverningBody = () => {
       </section>
 
       {/* 5. Constitution Transparency Callout */}
-      <section className="bg-[#0D2238] text-white py-12 px-4 sm:px-6 lg:px-8 border-y border-slate-800">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <section className="bg-[#0D2238] text-white py-12 border-y border-slate-800">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-[#D4A359] block mb-1">
               DEMOCRACY & ETHICS

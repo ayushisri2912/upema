@@ -138,7 +138,7 @@ const Contact = () => {
         {/* Floating Radial Gold Aura */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#C9A45C]/10 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           
           <motion.span
             initial={{ opacity: 0, y: -10 }}
@@ -172,10 +172,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* =========================================================
-          2. MINIMAL 3-COLUMN CONTACT HIGHLIGHT BAR (SPACIOUS GLASSMORT)
-      ======================================================== */}
-      <section className="max-w-[1200px] mx-auto px-4 sm:px-6 -mt-12 relative z-20 font-sans">
+      {/* 2. MINIMAL 3-COLUMN CONTACT HIGHLIGHT BAR */}
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20 font-sans">
         <div className="bg-white rounded-2xl shadow-xl border border-[#E7E0D3] p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           
           {/* Item 1 */}
@@ -217,10 +215,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* =========================================================
-          3. SPACIOUS 2-COLUMN SECTION WITH HIGH CONTRAST
-      ======================================================== */}
-      <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 font-sans">
+      {/* 3. SPACIOUS 2-COLUMN SECTION WITH HIGH CONTRAST */}
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 font-sans">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
@@ -401,11 +397,9 @@ const Contact = () => {
 
       </section>
 
-      {/* =========================================================
-          4. UNCLUTTERED TABBED ZONAL CHAPTERS SELECTOR (PREVENTS OVERCROWDING!)
-      ======================================================== */}
+      {/* 4. UNCLUTTERED TABBED ZONAL CHAPTERS SELECTOR */}
       <section className="bg-white py-16 border-t border-b border-[#E7E0D3] font-sans">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 space-y-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs text-[#C9A45C] font-extrabold uppercase tracking-widest">
@@ -469,10 +463,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* =========================================================
-          5. MINIMAL CLEAN ACCORDION FAQ SECTION
-      ======================================================== */}
-      <section className="max-w-[1000px] mx-auto px-4 sm:px-6 py-20 font-sans">
+      {/* 5. MINIMAL CLEAN ACCORDION FAQ SECTION */}
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 font-sans">
         
         <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
           <span className="text-xs text-[#C9A45C] font-extrabold uppercase tracking-widest">

@@ -67,13 +67,13 @@ const whyChooseCards = [
 
 const BenefitsSection = () => {
   return (
-    <section className="w-full bg-[#F8F6F1] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 font-sans relative overflow-hidden">
+    <section className="w-full bg-[#F8F6F1] py-16 sm:py-20 lg:py-24 border-t border-slate-200/60 font-sans relative overflow-hidden">
       
       {/* Background Decorative Ambient Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-[#1279CF]/8 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-[500px] h-[300px] bg-[#C9A45C]/8 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Centered Header (Matching PillarsSection & Other Home Sections Typography Exactly) */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">

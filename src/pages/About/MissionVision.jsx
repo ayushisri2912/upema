@@ -139,8 +139,8 @@ const MissionVision = () => {
       </section>
 
       {/* 2. Dual Royal Mission & Vision Cards */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           
           {/* Mission Card (Royal Navy Accent) */}
           <div className="relative bg-white rounded-3xl p-8 sm:p-12 border-2 border-blue-100 hover:border-[#1279CF]/60 shadow-xl shadow-blue-900/5 transition-all duration-300 flex flex-col justify-between group">
@@ -212,8 +212,8 @@ const MissionVision = () => {
       </section>
 
       {/* 3. The 4 Fundamental Pillars */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 sm:py-20 bg-[#F0F6FB] border-t border-blue-100/60">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1279CF] text-xs font-semibold tracking-wider uppercase mb-3 shadow-sm">
@@ -258,8 +258,8 @@ const MissionVision = () => {
       </section>
 
       {/* 4. Strategic 3-Year Roadmap */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 sm:py-20 bg-white border-t border-slate-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-[#9E7A32] text-xs font-semibold tracking-wider uppercase mb-3 shadow-sm">

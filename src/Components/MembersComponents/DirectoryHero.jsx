@@ -24,7 +24,7 @@ const DirectoryHero = () => {
       <div className="absolute -bottom-24 -right-24 w-96 h-96 border border-[#C9A45C]/15 rounded-full pointer-events-none" />
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
         
         {/* Small Gold Eyebrow */}
         <motion.div

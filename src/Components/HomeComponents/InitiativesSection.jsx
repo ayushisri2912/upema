@@ -268,8 +268,8 @@ const initiatives = [
 
 const InitiativesSection = () => {
   return (
-    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 bg-[#F0F6FB] border-t border-blue-100/60 transition-colors duration-300">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">

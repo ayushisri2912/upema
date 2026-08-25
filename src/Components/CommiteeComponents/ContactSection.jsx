@@ -5,7 +5,7 @@ import { FiArrowRight, FiMail } from 'react-icons/fi'
 
 const ContactSection = () => {
   return (
-    <section className="relative w-full bg-[#0B2343] text-white py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative w-full bg-[#0B2343] text-white py-20 md:py-24 overflow-hidden">
       {/* Background Decorative Radial Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#D4A017]/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute -bottom-10 right-10 w-80 h-80 bg-[#D4A017]/5 rounded-full blur-[100px] pointer-events-none" />
@@ -16,7 +16,7 @@ const ContactSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative z-10 max-w-4xl mx-auto text-center"
+        className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
         {/* Top Gold Icon Badge */}
         <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#D4A017]/15 text-[#D4A017] border border-[#D4A017]/30 mb-6 shadow-inner">

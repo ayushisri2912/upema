@@ -5,19 +5,14 @@ import { FiArrowRight } from 'react-icons/fi'
 
 const DirectoryCTA = ({ onExploreClick }) => {
   return (
-    <section className="w-full bg-[#F7F5F0] py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+    <section className="w-full bg-[#F7F5F0] py-20 md:py-24 border-t border-slate-200">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto text-center"
+        className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
-        {/* Small Gold Eyebrow */}
-        <span className="text-[#C9A45C] text-xs font-extrabold uppercase tracking-widest block mb-2">
-          CONNECT WITH THE RIGHT PROFESSIONAL
-        </span>
-
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B1F3A] font-serif tracking-tight mb-4">
           Looking for the Right Event Partner?

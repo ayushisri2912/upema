@@ -215,7 +215,7 @@ const PastEvents = () => {
         <div className="absolute -bottom-24 -right-24 w-96 h-96 border border-[#C9A45C]/15 rounded-full pointer-events-none" />
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
           
           {/* Small Gold Eyebrow Badge */}
           <motion.div
@@ -306,7 +306,7 @@ const PastEvents = () => {
       {/* =========================================================
           2. MINIMAL SEARCH & FILTER BAR
       ======================================================== */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 -mt-6 relative z-20 font-sans">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 -mt-6 relative z-20 font-sans">
         <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md border border-[#E7E0D3]">
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
@@ -381,7 +381,7 @@ const PastEvents = () => {
       {/* =========================================================
           3. MINIMAL & ELEGANT PAST EVENT CARDS GRID
       ======================================================== */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
         
         {filteredEvents.length === 0 ? (
           <div className="bg-white rounded-lg p-10 text-center border border-gray-200 max-w-md mx-auto my-6 font-sans">

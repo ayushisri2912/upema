@@ -269,7 +269,7 @@ const Footer = () => {
       {/* Subtle Ambient Gold Glow in background */}
       <div className="absolute top-0 right-1/4 w-96 h-24 bg-[#D4A359]/5 rounded-full blur-[90px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 5-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-10 border-b border-zinc-800/80 items-start">

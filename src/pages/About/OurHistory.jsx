@@ -89,8 +89,7 @@ const OurHistory = () => {
   {/* Ambient Warm Golden & Blue Glows */}
   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-[#C9A45C]/12 rounded-full blur-[140px] pointer-events-none" />
   <div className="absolute -bottom-10 right-10 w-96 h-96 bg-[#1279CF]/15 rounded-full blur-[120px] pointer-events-none" />
-
-  <div className="max-w-6xl mx-auto text-center relative z-10">
+  <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
     
     {/* Top Royal Breadcrumb Pill Badge */}
     <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-[#FAF8F2] border border-[#E7E0D3] text-[#081A2B] text-xs font-bold uppercase tracking-widest mb-7 shadow-lg">
@@ -124,7 +123,7 @@ const OurHistory = () => {
   </div>
 
   {/* 4 Floating Metric Stat Cards (Pattern Maintained, Theme Updated to Dark Glassmorphism) */}
-  <div className="max-w-6xl mx-auto mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative z-10">
+  <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative z-10">
     {[
       { value: '31 May 2025', label: 'FOUNDATION DATE', desc: 'Inaugurated at Lucknow', icon: FiCalendar },
       { value: '300+', label: 'VERIFIED MEMBERS', desc: 'Across UP Fraternity', icon: FiAward },
@@ -163,8 +162,8 @@ const OurHistory = () => {
       {/* 2. Key Metrics Bar */}
      
       {/* 3. Story / Inception Section */}
-      <section className="pt-12 sm:pt-16 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <section className="pt-12 sm:pt-16 pb-16 sm:pb-20">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* Left Column */}
           <div className="lg:col-span-6 relative">
@@ -228,8 +227,8 @@ const OurHistory = () => {
       </section>
 
       {/* 4. Timeline */}
-      <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60">
-        <div className="max-w-6xl mx-auto">
+      <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 bg-[#F0F6FB] border-t border-blue-100/60">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-[#D4A359] text-xs font-semibold tracking-wider uppercase mb-3 shadow-sm">

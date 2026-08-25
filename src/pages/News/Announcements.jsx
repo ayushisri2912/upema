@@ -81,7 +81,7 @@ const Announcements = () => {
       <section className="relative w-full min-h-[440px] bg-[#0B1F3A] flex items-center justify-center overflow-hidden text-white border-b border-[#C9A45C]/30">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#C9A45C]/10 rounded-full blur-[130px] pointer-events-none" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20 pb-12">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-12">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ const Announcements = () => {
       </section>
 
       {/* Filter & Search Bar */}
-      <section className="max-w-[1280px] mx-auto px-4 py-8 -mt-6 relative z-20">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 -mt-6 relative z-20">
         <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md border border-[#E7E0D3]">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
             
@@ -141,7 +141,7 @@ const Announcements = () => {
       </section>
 
       {/* Announcements List */}
-      <section className="max-w-[1280px] mx-auto px-4 pb-16">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="space-y-4">
           {filteredAnnouncements.map((item) => (
             <div

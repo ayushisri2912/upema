@@ -134,7 +134,7 @@ const WhyBecomeMembers = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-[#C9A45C]/12 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute -bottom-10 right-10 w-96 h-96 bg-[#1279CF]/15 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="max-w-6xl mx-auto text-center relative z-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           
           <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-[#FAF8F2] border border-[#E7E0D3] text-[#081A2B] text-xs font-bold uppercase tracking-widest mb-7 shadow-lg">
             <span className="text-[#C9A45C] text-sm">🏛️</span>
@@ -145,7 +145,7 @@ const WhyBecomeMembers = () => {
 
           <h1 className="text-3xl sm:text-5xl lg:text-[62px] font-extrabold tracking-tight leading-[1.18] mb-5">
             <span className="bg-gradient-to-r from-[#FFEBB0] via-[#DDB063] to-[#C99846] bg-clip-text text-transparent drop-shadow-sm">
-              Why Become a3
+              Why Become a
               
             </span>{' '}
             <span className="font-serif italic font-bold bg-gradient-to-r from-[#FFEBB0] via-[#E2B768] to-[#C99846] bg-clip-text text-transparent">
@@ -188,8 +188,8 @@ const WhyBecomeMembers = () => {
       </section>
 
       {/* 2. Key Membership Advantages (IPA Style Core Pillars) */}
-      <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 sm:py-24 bg-white">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1279CF] text-xs font-semibold tracking-wider uppercase mb-3 shadow-sm">
@@ -235,8 +235,8 @@ const WhyBecomeMembers = () => {
       </section>
 
       {/* 3. Membership Categories / Tiers */}
-      <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 sm:py-24 bg-[#F0F6FB] border-t border-blue-100/60">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#9E7A32] text-xs font-semibold tracking-wider uppercase mb-3 shadow-sm">
@@ -299,6 +299,7 @@ const WhyBecomeMembers = () => {
                 <div className="mt-8 pt-6">
                   <Link
                     to="/register"
+                    state={{ tier: t.name }}
                     className={`w-full py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${
                       t.popular
                         ? 'bg-gradient-to-r from-[#D4A359] to-[#C2934A] hover:from-[#e2b56e] hover:to-[#b5833b] text-[#071322] shadow-lg shadow-amber-500/25'
@@ -318,8 +319,8 @@ const WhyBecomeMembers = () => {
       </section>
 
       {/* 4. Simple 4-Step Onboarding Process */}
-      <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 sm:py-24 bg-white border-t border-slate-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1279CF] text-xs font-semibold tracking-wider uppercase mb-3">

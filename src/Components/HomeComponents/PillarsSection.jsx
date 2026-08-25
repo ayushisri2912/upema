@@ -66,13 +66,13 @@ const destinationHubs = [
 
 const PillarsSection = () => {
   return (
-    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-[#F0F6FB] border-t border-blue-100/60 transition-colors duration-300">
+    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 bg-[#F0F6FB] border-t border-blue-100/60 transition-colors duration-300">
       
       {/* Soft Ambient Background Glows */}
       <div className="absolute top-1/3 left-0 w-[500px] h-[300px] bg-[#1279CF]/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-[500px] h-[300px] bg-[#C9A45C]/8 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">

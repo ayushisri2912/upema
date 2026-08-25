@@ -187,7 +187,7 @@ const PhotoGallery = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#C9A45C]/10 rounded-full blur-[130px] pointer-events-none" />
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-14">
           
           {/* Small Gold Eyebrow Badge */}
           <motion.div
@@ -500,7 +500,7 @@ const PhotoGallery = () => {
       {/* =========================================================
           4. SUBMIT PORTFOLIO CTA SECTION
       ======================================================== */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 font-sans">
         <div className="bg-[#0B1F3A] text-white rounded-lg p-8 sm:p-10 border border-[#C9A45C]/40 flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-2 text-center md:text-left">

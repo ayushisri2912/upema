@@ -11,7 +11,7 @@ const GetListBanner = () => {
       <div className="absolute bottom-0 left-0 w-80 h-80 border border-[#C9A45C]/15 rounded-full pointer-events-none" />
 
       {/* Main Container */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
         
         {/* Left Side Info */}
         <motion.div

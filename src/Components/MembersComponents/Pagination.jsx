@@ -8,7 +8,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage, totalItems, items
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-200">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mb-20 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-200">
       {/* Member Count Text */}
       <span className="text-xs sm:text-sm text-slate-500 font-medium">
         Showing <span className="font-bold text-[#0B1F3A]">{startItem}–{endItem}</span> of <span className="font-bold text-[#0B1F3A]">{totalItems > 12 ? '300+' : totalItems} Members</span>
