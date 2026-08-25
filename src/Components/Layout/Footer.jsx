@@ -247,6 +247,7 @@ import {
   FaInstagram 
 } from 'react-icons/fa6';
 import logoImg from '../../assets/images/logo.jpeg';
+import codecrafterLogo from '../../assets/images/codecrafter-logo.jpeg';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -447,8 +448,17 @@ const Footer = () => {
             <Link to="/terms" className="hover:text-[#D4A359] transition-colors cursor-pointer">
               Terms of Use
             </Link>
-           
           </div>
+        </div>
+
+        {/* CodeCrafter Digital Intelligence Branding Bar */}
+        <div className="mt-5 pt-4 border-t border-zinc-900 flex items-center justify-center gap-2 text-xs text-zinc-400 font-sans text-center flex-wrap">
+          <span>Precision Crafted with Digital Intelligence by</span>
+          <img
+            src={codecrafterLogo}
+            alt="CodeCrafter"
+            className="h-6 w-auto object-contain rounded bg-white/5 p-0.5 border border-zinc-800"
+          />
         </div>
 
       </div>
